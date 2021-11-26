@@ -7,7 +7,7 @@ import { IconType } from "react-icons/lib";
 
 interface InputProps {
   name: string;
-  icon: IconType;
+  icon?: IconType;
   placeholder: string;
 }
 
