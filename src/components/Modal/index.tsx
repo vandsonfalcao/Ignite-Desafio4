@@ -12,15 +12,11 @@ export function Modal(props: ModalProps) {
   const [modalStatus, setModalStatus] = useState(isOpen);
 
   useEffect(() => {
-    componentDidUpdate();
-  });
-
-  function componentDidUpdate() {
     if (modalStatus !== isOpen) {
       console.log(props);
       setModalStatus(isOpen);
     }
-  }
+  }, [isOpen]);
 
   return (
     <ReactModal
