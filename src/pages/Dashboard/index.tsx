@@ -12,8 +12,8 @@ interface FoodItem {
   name: string;
   description: string;
   price: string;
-  available: boolean;
   image: string;
+  available: boolean;
 }
 
 export function Dashboard() {
@@ -23,25 +23,18 @@ export function Dashboard() {
   const [editModalOpen, setEditModalOpen] = useState(false);
 
   useEffect(() => {
-    componentDidMount();
-  });
-
-  async function componentDidMount() {
-    await api.get("/foods").then((response) => {
+    api.get("/foods").then((response) => {
       setFoods(response.data);
     });
-  }
+  }, []);
 
   async function handleAddFood(food: FoodItem) {
     try {
-      await api
-        .post("/foods", {
-          ...food,
-          available: true,
-        })
-        .then((response) => {
-          setFoods([...foods, response.data]);
-        });
+      const response = await api.post("/foods", {
+        ...food,
+        available: true,
+      });
+      setFoods([...foods, response.data]);
     } catch (err) {
       console.log(err);
     }
@@ -91,7 +84,7 @@ export function Dashboard() {
       <ModalAddFood
         isOpen={modalOpen}
         setIsOpen={toggleModal}
-        handleAddFood={() => handleAddFood}
+        handleAddFood={handleAddFood}
       />
       <ModalEditFood
         isOpen={editModalOpen}
