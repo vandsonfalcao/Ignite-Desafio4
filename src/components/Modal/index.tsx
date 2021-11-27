@@ -16,7 +16,7 @@ export function Modal(props: ModalProps) {
       console.log(props);
       setModalStatus(isOpen);
     }
-  }, [isOpen]);
+  }, [isOpen, modalStatus, props]);
 
   return (
     <ReactModal
