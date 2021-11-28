@@ -31,22 +31,6 @@
       "description": "Macarrão ao molho azul, pedaços de carne e frango.",
       "available": true,
       "id": 4
-    },
-    {
-      "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food2.png",
-      "name": "teste",
-      "price": "20.20",
-      "description": "teste",
-      "available": true,
-      "id": 5
-    },
-    {
-      "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food2.png",
-      "name": "teste2",
-      "price": "20.20",
-      "description": "teste2",
-      "available": false,
-      "id": 6
     }
   ]
 }
