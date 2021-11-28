@@ -47,6 +47,6 @@ FakeAPI: http://localhost:3333  & http://localhost:3333/foods
 ## Tecnologias
 
 - ReactJS
-- Miraje(FakeAPI)
+- Miraje(FakeAPI) | ONLINE fakeapi: https://github.com/vandsonfalcao/Ignite-Desafio4-FakeApi
 - Styled-Components
 - Typescript
